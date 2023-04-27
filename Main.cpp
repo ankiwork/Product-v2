@@ -17,12 +17,11 @@ int main() {
 			flag = CheckingAStringForNumbers(destination, flag);
 			if (!flag) { flag = CheckingTheNumberForTheRangeOfTheMenu(destination, flag); }
 			attempt = false;
-		} flag = true;
+		} flag = true; attempt = true;
 		switch (atoi(destination)) {
 		case 1: { flag = false; break; }
 		case 2: {
 			char* Name = new char[buffer];
-			attempt = true;
 			while (flag) { 
 				system("cls");
 				std::cout << "The product name must consist of Latin lowercase letters\n";
@@ -31,9 +30,8 @@ int main() {
 				InputString(destination); 
 				flag = InputName(destination, Name, flag); 
 				attempt = false;
-			} flag = true; 
+			} flag = true; attempt = true;
 			char* Type = new char[buffer];
-			attempt = true;
 			while (flag) {
 				system("cls");
 				std::cout << "The type of product is entered by a number (1 - cookie, 2 - pizza, 3 - bun)\n";
@@ -42,9 +40,8 @@ int main() {
 				InputString(destination);
 				flag = InputType(destination, Type, flag);
 				attempt = false;
-			} flag = true; 
+			} flag = true; attempt = true;
 			char* Quant = new char[buffer];
-			attempt = true;
 			while (flag) {
 				system("cls");
 				std::cout << "The number of products should not exceed 10000 items\n";
@@ -53,9 +50,8 @@ int main() {
 				InputString(destination);
 				flag = InputQuant(destination, Quant, flag);
 				attempt = false;
-			} flag = true; 
+			} flag = true; attempt = true;
 			char* Weight = new char[buffer];
-			attempt = true;
 			while (flag) {
 				system("cls");
 				std::cout << "The weight of the product should not exceed 50 kg\n";
@@ -64,9 +60,8 @@ int main() {
 				InputString(destination);
 				flag = InputWeight(destination, Weight, flag);
 				attempt = false;
-			} flag = true; 
+			} flag = true; attempt = true;
 			char* Cost = new char[buffer];
-			attempt = true;
 			while (flag) {
 				system("cls");
 				std::cout << "The price of the product should not exceed 100 conventional units\n";
@@ -75,7 +70,7 @@ int main() {
 				InputString(destination);
 				flag = InputCost(destination, Cost, flag);
 				attempt = false;
-			} flag = true;
+			} flag = true; attempt = true;
 			Product product{ Name, Type, Quant, Weight, Cost };
 			delete[] Name;
 			delete[] Type;
