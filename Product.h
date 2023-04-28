@@ -48,5 +48,5 @@ public:
 	double GetWeight() { return weight; }
 	// Count
 	void SetCount(int Count) { count = Count; }
-    int GetCount() { return count; }
+        int GetCount() { return count; }
 };
