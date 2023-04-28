@@ -37,12 +37,12 @@ bool InputCost(char* destination, char* Cost, bool flag) {
 }
 bool CheckingAStringForNumbers(char* destination, bool flag) {
 	for (int i = 0; i < strlen(destination) - 1; i++) {
-		if (destination[i] < 48 || destination[i] > 57) { flag = true; break; }
+		if (destination[i] < 48 || destination[i] > 57) { flag = true; break; } 
 		else { flag = false; }
 	}
 	return flag;
 }
-bool CheckingTheNumberForTheRangeOfTheMenu(char* destination, bool flag) {
+bool CheckingTheNumberForTheRangeOfTheMenu(char* destination, bool flag) { 
 	if (atoi(destination) > 0 && atoi(destination) < 8) { flag = false; }
 	else { flag = true; }
 	return flag;
@@ -80,13 +80,17 @@ bool CheckingAStringForNumbersAndOneComma(char* destination, bool flag) {
 		if (destination[0] == 44 || destination[strlen(destination) - 2] == 44) { flag = true; break; }
 		if (destination[i] < 97 || destination[i] > 122) {
 			if (destination[i] == 44) {
-				count++;
-				if (count > 1) { flag = true; break;}
+				count++; if (count > 1) { flag = true; break;}
 			}
 			flag = false;
 		}
 		else { flag = true; break; }
 	}
+	return flag;
+}
+bool CheckingOutputInformationAboutOneProductDiopter(char* destination, int count, bool flag) {
+	if (atoi(destination) > 0 && atoi(destination) <= count) { flag = false; }
+	else { flag = true; }
 	return flag;
 }
 void InteractiveMenuOutput() {
