@@ -16,6 +16,7 @@ bool CheckingTheNumberForTheRangeOfTheWeight(char* destination, bool flag);
 bool CheckingTheNumberForTheRangeOfTheCost(char* destination, bool flag);
 bool CheckingForTheLatinAlphabet(char* destination, bool flag);
 bool CheckingAStringForNumbersAndOneComma(char* destination, bool flag);
+bool CheckingOutputInformationAboutOneProductDiopter(char* destination, int count, bool flag);
 // Output of information for the user
 void InteractiveMenuOutput();
 void InputError();
