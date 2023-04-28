@@ -1,6 +1,7 @@
 #include "Libraries.h"
 #include "Product.h"
 #include "Source.h"
+int Product::count = 0;
 int main() {
 	Product* productArr = new Product[100];
 	bool flag = true;
@@ -22,13 +23,13 @@ int main() {
 		case 1: { flag = false; break; }
 		case 2: {
 			char* Name = new char[buffer];
-			while (flag) { 
+			while (flag) {
 				system("cls");
 				std::cout << "The product name must consist of Latin lowercase letters\n";
 				if (attempt) { std::cout << "Product name: "; }
 				else { InputError(); }
-				InputString(destination); 
-				flag = InputName(destination, Name, flag); 
+				InputString(destination);
+				flag = InputName(destination, Name, flag);
 				attempt = false;
 			} flag = true; attempt = true;
 			char* Type = new char[buffer];
@@ -72,17 +73,20 @@ int main() {
 				attempt = false;
 			} flag = true; attempt = true;
 			Product product{ Name, Type, Quant, Weight, Cost };
-			/*productArr[0] = product;
-			productArr->TabularOutput(productArr, 0);
-			system("pause");*/
+			productArr[productArr->GetCount() - 1] = product;
 			delete[] Name;
 			delete[] Type;
 			delete[] Quant;
 			delete[] Weight;
 			delete[] Cost;
-			break;  
+			break;
 		}
-		case 3: { break; }
+		case 3: {
+			int i = 0; std::cin >> i;
+			productArr->TabularOutput(productArr, i); 
+		    system("pause");
+			break; 
+		}
 		case 4: { break; }
 		case 5: { break; }
 		case 6: { break; }
