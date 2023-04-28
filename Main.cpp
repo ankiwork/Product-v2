@@ -2,10 +2,10 @@
 #include "Product.h"
 #include "Source.h"
 int main() {
-	//Product* product = new Product[100];
+	Product* productArr = new Product[100];
 	bool flag = true;
 	while (flag) {
-		int buffer = 4096;
+		int buffer = 4096; 
 		bool attempt = true;
 		char* destination = new char[buffer];
 		while (flag) {
@@ -72,6 +72,9 @@ int main() {
 				attempt = false;
 			} flag = true; attempt = true;
 			Product product{ Name, Type, Quant, Weight, Cost };
+			/*productArr[0] = product;
+			productArr->TabularOutput(productArr, 0);
+			system("pause");*/
 			delete[] Name;
 			delete[] Type;
 			delete[] Quant;
