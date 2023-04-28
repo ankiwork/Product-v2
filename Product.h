@@ -23,6 +23,7 @@ public:
 		quant = atoi(Quant);
 		weight = atof(Weight);
 		cost = atof(Cost);
+		count++;
 	}
 public:
 	~Product() {
@@ -47,6 +48,6 @@ public:
 	void SetWeight(char* destination) { cost = atof(destination); }
 	double GetWeight() { return weight; }
 	// Count
-	void SetCount(int Count) { count = Count; }
-        int GetCount() { return count; }
+	static void SetCount(int Count) { count = Count; }
+        static int GetCount() { return count; }
 };
