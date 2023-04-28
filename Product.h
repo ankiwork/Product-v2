@@ -2,12 +2,7 @@
 #include "Libraries.h"
 class Product {
 private:
-	int type;
-	int quant;
-	char* name;
-	double cost;
-	double weight;
-        static int count;
+	int type; int quant; char* name; double cost; double weight; static int count;
 public:
 	Product() {
 		name = nullptr;
@@ -49,5 +44,5 @@ public:
 	double GetWeight() { return weight; }
 	// Count
 	static void SetCount(int Count) { count = Count; }
-        static int GetCount() { return count; }
+    static int GetCount() { return count; }
 };
