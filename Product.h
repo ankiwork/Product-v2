@@ -7,8 +7,15 @@ private:
 	char* name;
 	double cost;
 	double weight;
-	static int count;
+        static int count;
 public:
+	Product() {
+		name = nullptr;
+		type = 0;
+		quant = 0;
+		weight = 0;
+		cost = 0;
+	}
 	Product(char* Name, char* Type, char* Quant, char* Weight, char* Cost) {
 		name = new char[strlen(Name) + 1];
 		strcpy_s(name, strlen(Name) + 1, Name);
@@ -41,5 +48,5 @@ public:
 	double GetWeight() { return weight; }
 	// Count
 	void SetCount(int Count) { count = Count; }
-	static int GetCount() { return count; }
+    int GetCount() { return count; }
 };
